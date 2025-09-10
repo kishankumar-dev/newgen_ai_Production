@@ -2,31 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "newgen_ai_Production/package.json",
       "use": "@vercel/next"
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/chat-api/:path*",
-      "destination": "/api/chat-api/:path*"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/login",
-      "permanent": false
-    }
+    { "src": "/(.*)", "dest": "newgen_ai_Production/$1" }
   ]
 }
