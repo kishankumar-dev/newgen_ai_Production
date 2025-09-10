@@ -2,11 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "newgen_ai_Production/package.json",
+      "src": "next.config.ts",
       "use": "@vercel/next"
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "newgen_ai_Production/$1" }
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
   ]
 }
